@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 200px;
+            margin: auto;
+        }
+        #box div{
+            width: 280px;
+            height: 40px;
+            margin-top: 5px;
+            line-height: 40px;
+            overflow: hidden;
+            margin: auto;
+        }
+        .btn1{
+            background-image: url(../image/denglu.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px 20px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #cccccc;
+            vertical-align: middle;
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+            outline: none;
+        }
+        .btn2{
+            background-image: url(../image/denglumima-.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px 20px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #cccccc;
+            vertical-align: middle;
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+            outline: none;
+        }
+        .username{
+            width: 250px;
+            height: 30px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            border: 1px solid #cccccc;
+            border-left: none;
+            padding-left: 10px;
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+            outline: none;
+        }
+        .password{
+            width: 190px;
+            height: 30px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            border: 1px solid #cccccc;
+            border-left: none;
+            border-right: none;
+            padding-left: 10px;
+            outline: none;
+        }
+        .login{
+            width: 60px;
+            height: 30px;
+            vertical-align: middle;
+            border: 1px solid #cccccc;
+            background-color: rgb(141, 194, 243);
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+            outline: none;
+            cursor: pointer;
+            color: #666666;
+            
+        }
+        a{
+            text-decoration: none;
+            color:  rgb(141, 194, 243);
+            
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>
+            <button class="btn1"></button><input class="username" type="text" placeholder="请输入登录账号">
+        </div>
+        <div>
+            <button class="btn2"></button><input class="password" type="password" placeholder="请输入密码"><button class="login">登录</button>
+        </div>
+        <div>
+            <a class="left" href="#">忘记密码</a><a class="right" href="">注册账号</a>
+        </div>
+    </div>
+</body>
+</html>

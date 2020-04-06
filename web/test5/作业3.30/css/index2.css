@@ -1,0 +1,60 @@
+header{
+    background-color: rgb(180, 243, 222);
+}
+table{
+    width: 1600px;
+    height: 80px;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+.logo{
+    background-image: url(../image/logo.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    width: 240px;
+    height: 80px;
+}
+.nav,ul{
+    width: 800px;
+    height: 80px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    float: left;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:#868686;
+}
+.tel{
+    background-image: url(../image/dianhua.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 150px;
+    height: 80px;
+}
+.number{
+    text-align: right;
+    width: 120px;
+}
+.wechat{
+    background-image: url(../image/weixin.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 40px;
+    height: 80px;
+}
+.ask{
+    width: 60px;
+    text-align: center;
+}
+a:hover{
+    color: cornflowerblue;
+    background-color: burlywood;
+}

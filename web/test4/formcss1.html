@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            width: 500px;
+            /* border: 1px solid gray; *//*参考看box-shadow效果*/
+            box-shadow:0px 0px 1px 1px gray;
+            border-spacing: 0;
+            background-color: white;
+        }
+        tr{
+            height: 60px;
+        }
+        .title{
+            /* font-weight: bold; */
+            font-size: 25px;
+        }
+        .logo{
+            text-align: right;
+        }
+        td{
+            border-bottom: 1px dashed gray; /*设置分割线*/
+            text-align: center;
+        }
+        input{
+            width: 315px;
+            height: 30px;
+        }
+        body{
+            background-image: url("images/bg.jpg");
+        }
+        button{
+            background-color: lightskyblue;
+            width: 80px;
+            height: 30px;
+            border: 1px solid lightskyblue;
+        }
+        a{
+            text-decoration: none;
+        }
+        .a-black{
+            color: black;
+        }
+        .a-blue{
+            color: deepskyblue;
+        }
+        #inner{
+            border: none;/*将最后一个td 的border-buttom取消*/
+        }
+        .t-right{
+            text-align: right;/*代替掉之前设置的所有td内容居中，让部分td内容右对齐*/
+        }
+    </style>
+</head>
+<body>
+    <form action="info.html">
+    <table>
+        <!-- 这是个9行两列的表格 -->
+        <tr>
+            <!-- 此行为标题logo部分 -->
+            <td class="title">随意表单</td>
+            <td class="logo"><img src="images/try.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <!-- 此后行列皆为表单元素部分 -->
+            <td class="t-right"><span>标题</span></td>
+            <td><input type="text" required name="title" ></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>名称</span></td>
+            <td><input type="text" required name="username"></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>邮箱</span></td>
+            <td><input type="email" name="useremail" id="" required></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>出生日期</span></td>
+            <td><input type="date" name="brondate" id="" required></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>城市</span></td>
+            <td><input type="text" name="city" required></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>您的猫的名字</span></td>
+            <td><input type="text" name="catname" required></td>
+        </tr>
+        <tr>
+            <td class="t-right"><span>手机</span></td>
+            <td><input type="text" name="tel" required></td>
+        </tr>
+        <tr>
+            <!-- 此为提交和超链接部分 -->
+            <td colspan="2" id="inner"><button type="submit">发送</button>&nbsp;<a href="" class="a-black">已有账号</a>&nbsp;,&nbsp;<a href="" class="a-blue">立即注册</a> </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="info.html">
+        <table border="1" cellspacing="0" align="center" >
+            <tr align="center" bgcolor="pink">
+                <td  colspan="3"><h1>注册页面</h1></td>
+            </tr>
+            <tr align="center">
+                <td>姓名：</td>
+                <td colspan="2"><input type="text" name="username" required></td>
+            </tr>
+            <tr bgcolor="pink" align="center">
+                <td>密码：</td>
+                <td colspan="2"><input type="password" name="pass" required></td>
+            </tr>
+            <tr align="center">
+                <td>年龄：</td>
+                <td colspan="2"><input type="number" name="num" required></td>
+            </tr>
+            <tr bgcolor="pink" align="center">
+                <td>电子邮件：</td>
+                <td colspan="2"><input type="email" name="usermail" required></td>
+            </tr>
+            <tr align="center">
+                <td>出生年月：</td>
+                <td colspan="2"><input type="date" name="userdate" required></td>
+            </tr>
+            <tr bgcolor="pink" align="center">
+                <td>喜欢的颜色：</td>
+                <td colspan="2"><input type="color" name="colors" required></td>
+            </tr>
+            <tr align="center">
+                <td>喜欢的网站：</td>
+                <td>
+                    <input type="text" list="web">
+                    <datalist id="web">
+                        <option value="http://www.baidu.com">百度</option>
+                        <option value="http://www.qq.com">腾讯</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr bgcolor="pink" align="center">
+                <td colspan="3" align="right"><input type="submit" value="提交">已有账号 <a href="form1.html">点击这里</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

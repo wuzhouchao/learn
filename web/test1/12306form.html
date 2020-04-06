@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" align="center" cellspacing="0">
+        <tr>
+            <td>
+                <table width="980px" height="30px"  bgcolor="#368bca" align="center">
+                    <tr>
+                        <td align="left"><font color="white">User Information</font></td>
+                    </tr>
+                </table>
+                <form action="info.html">
+                    <table width="980px" height="30px"  align="center" cellspacing="10">
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">用户名：</font></span>
+                            </td>
+                            <td><input type="text" placeholder="用户名设置成功后不可更改" name="names"></td>
+                            <td><span><font face="宋体" color="#fb7e20" size="2">6-30位字母、数字或“_”,字母开头</font></span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">登录密码：</font></span>
+                            </td>
+                            <td><input type="password" placeholder="6-20位字母，数字或符号" name="password"></td>
+                            <td>
+                                <table cellspacing="3">
+                                    <tr>
+                                        <td bgcolor="red" width="50px" height="2px"></td>
+                                        <td bgcolor="grey" width="50px" height="2px"></td>
+                                        <td bgcolor="grey" width="50px" height="2px"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">确认密码：</font></span>
+                            </td>
+                            <td><input type="password" placeholder="6-20位字母，数字或符号" name="password1"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">证件类型：</font></span>
+                            </td>
+                            <td>
+                                <select name="document" id="">
+                                    <option value="born">中国居民身份证</option>
+                                    <option value="right">港澳通行证</option>
+                                    <option value="out">护照</option>
+                                </select>
+                            </td>
+                            <td><a href="#"><span><font face="宋体" color="#fb7e20" size="2">证件填写规则</font></span></a></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">姓名：</font></span>
+                            </td>
+                            <td><input type="text" placeholder="输入证件上的中文姓名" name="username"></td>
+                            <td><a href="#"><span><font face="宋体" color="#fb7e20" size="2">姓名填写规则 （用于身份核验，请正确填写）</font></span></a></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">证件号码：</font></span>
+                            </td>
+                            <td><input type="text" placeholder="请输入您的证件号码" name="card"></td>
+                            <td><span><font face="宋体" color="#fb7e20" size="2">（用于身份核验，请正确填写）</font></span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">证件有效截止日期：</font></span>
+                            </td>
+                            <td><input type="date" name="carddate"></td>
+                            <td><span><font face="宋体" color="#fb7e20" size="2">（用于身份核验，请正确填写）</font></span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">出生日期：</font></span>
+                            </td>
+                            <td><input type="date" name="borndate"></td>
+                            <td><span><font face="宋体" color="#fb7e20" size="2">（用于身份核验，请正确填写）</font></span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">性别：</font></span>
+                            </td>
+                            <td>
+                                <input type="radio" name="sex" id="" value="male">男  <input type="radio" name="sex" id="" value="female">女
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">邮箱：</font></span>
+                            </td>
+                            <td><input type="email" name="mail" id="" placeholder="请正确输入您的邮箱"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">手机号码（+86）：</font></span>
+                            </td>
+                            <td><input type="text" placeholder="请正确输入您的手机号码" name="tel"></td>
+                            <td><span><font face="宋体" color="#fb7e20" size="2">请正确填写手机号码，稍后将向该手机号码发送短信验证码</font></span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <span><font color="red">*</font></span>&nbsp;<span><font face="宋体">旅客类型：</font></span>
+                            </td>
+                            <td>
+                                <select name="visitor" id="">
+                                    <option value="oldman">老人</option>
+                                    <option value=" adult" selected>成人</option>
+                                    <option value=" children">儿童</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><input type="checkbox" name="" id="">我已阅读并同意遵守 <a href="#">《中国铁路客户服务中心网站服务条款》 《隐私权政策》</a> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="center"> <input type="submit" value="下一步" style="background-color:#fb7e20"> </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

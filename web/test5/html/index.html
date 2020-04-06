@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <table id="box">
+        <tr class="title">
+            <th>名称</th>
+            <th>描述</th>
+            <th>图片</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>操作</th>
+        </tr>
+        <tr class="getcolor">
+            <td>卫龙辣条</td>
+            <td>哈哈哈</td>
+            <td><img src="../image/id1.jpg" alt=""></td>
+            <td>12</td>
+            <td><button class="btn-getthing">-</button><input type="text" value="3" readonly><button class="btn-getthing" >+</button></td>
+            <td class="del">删除</td>
+        </tr>
+        <tr class="getcolor">
+            <td>卫龙辣条</td>
+            <td>哈哈哈</td>
+            <td><img src="../image/id2.jpg" alt=""></td>
+            <td>12</td>
+            <td><button class="btn-getthing">-</button><input type="text" value="3" readonly><button class="btn-getthing">+</button></td>
+            <td class="del">删除</td>
+        </tr>
+        <tr class="getcolor">
+            <td>卫龙辣条</td>
+            <td>哈哈哈</td>
+            <td><img src="../image/id3.jpg" alt=""></td>
+            <td>12</td>
+            <td><button class="btn-getthing" onclick="sub()">-</button ><input type="text" value="3" readonly id="input"><button class="btn-getthing" onclick="add()">+</button></td>
+            <td class="del">删除</td>
+        </tr>
+        <tr>
+            <td colspan="6" id="last-td"> 
+                <p>总价为：<span class="total">￥857</span></p>
+                <button id="btn" type="submit">立即购买</button>
+            </td>
+        </tr>
+    </table>
+    <script src="../js/index.js"></script>
+</body>
+</html>

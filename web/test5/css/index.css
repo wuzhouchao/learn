@@ -1,0 +1,57 @@
+#box{
+    margin: 0 auto;
+    width: 1000px;
+    height: 800px;
+    border-spacing: 0;
+}
+.title{
+    background-color: #dddddd;
+    height: 40px;
+}
+img{
+    width: 150px;
+}
+input{
+    width: 24px;
+    text-align: center;
+}
+tr{
+    text-align: center;
+}
+#last-td{
+    height: 200px;
+    text-align: right;
+    border-bottom: none;
+}
+.total{
+    font-size: 30px;
+    color: #8c0001;
+    font-weight: bold;
+}
+#btn{
+    background-color: #8c0001;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: "宋体";
+    border: 1px solid #8c0001;
+}
+body{
+    background-image: url(../image/bg.jpg);
+}
+.del{
+    color: cornflowerblue;
+}
+.del:hover{
+    color: #8c0001;
+}
+.getcolor:hover{
+    background-color: darkgray;
+}
+td{
+    border-bottom: 1px dashed gray;
+}
+.btn-getthing{
+    width: 30px;
+}

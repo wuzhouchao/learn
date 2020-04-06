@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = decodeURIComponent(location.search);
+        str  = str.substr(1);
+        datas = str.split('&');
+        var htmlstr = '';
+        for(var i =0;i<datas.length;i++){
+            var key = datas[i].split('=')[0];
+            var value = datas[i].split('=')[1];
+            htmlstr+=`${key} : ${value}<br>`;
+        }
+        document.write(htmlstr);
+    </script>
+</body>
+</html>

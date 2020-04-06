@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="info.html">
+    <table width="100%" height="750px"  cellspacing="0">
+        <tr bgcolor="#c4e0f3" height="40px">
+            <td colspan="2">
+                我的项目：
+                <select name="pro" id="">
+                    <option value="demoone">agileonedemo</option>
+                    <option value="demotwo">agiletwodemo</option>
+                    <option value="demothree">agilethreedemo</option>
+                </select>
+                &nbsp;&nbsp;<input type="submit" value="转到">
+            </td>
+            <td colspan="2" align="right">
+                新建子项：
+                <select name="pro" id="">
+                    <option value="demoone1">缺陷跟踪1</option>
+                    <option value="demotwo2">缺陷跟踪2</option>
+                    <option value="demothree3">缺陷跟踪3</option>
+                </select>
+                &nbsp;&nbsp;<input type="submit" value="新建">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>编号:</td>
+            <td><input type="number" name="num" required></td>
+            <td>创建者:</td>
+            <td><input type="text" name="user" required></td>
+        </tr>
+        <tr>
+            <td>创建时间:</td>
+            <td><input type="date" required></td>
+            <td>缺陷来源:</td>
+            <td><input type="text" name="disadvantage" required></td>
+        </tr>
+        <tr>
+            <td>状态:</td>
+            <td>
+                <select name="state" id="">
+                    <option value="good"> 完好完好完好完好完好完好</option>
+                    <option value="bad">故障故障故障故障故障故障</option>
+                </select>
+            </td>
+            <td>严重程度:</td>
+            <td>
+                <select name="state2" id="">
+                    <option value="good1">一级一级一级一级一级一级</option>
+                    <option value="bad2">二级二级二级二级二级二级</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>标题：</td>
+            <td colspan="3">
+                <input type="text" list="title" name="title">
+                <datalist id="title">
+                    <option value="title1">标题好长啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</option>
+                    <option value="title2">标题好长啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</option>
+                </datalist>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>内容：</td>
+            <td colspan="3"><textarea name="" id="" cols="100" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>操作：</td>
+            <td colspan="3"> <input type="submit" value="新建"> <input type="submit" value="重置"> <input type="submit" value="编辑"> <input type="submit" value="搜索"></td>
+        </tr>
+    </table>
+   </form>
+</body>
+</html>

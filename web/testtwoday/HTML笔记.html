@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h3>主要内容</h3>
+<ol>
+<li>HTML概念</li>
+<li>HTML语法</li>
+<li>
+<p>常用HTML标签</p>
+</li>
+<li>
+<p>什么是HTML？
+HTML是用来写网页的？ </p>
+<ul>
+<li>网页：指浏览器用来显示互联网数据的一个工具。互联网数据有纯文本、超链接、图片、音频、视频、列表之类的。</li>
+<li>
+<p>网页的本质：是什么构成了网页。一个网页是HTML代码的体现。</p>
+</li>
+<li>
+<p>html: 超文本标记语言(hyper-text Markup language)</p>
+<ul>
+<li>超文本：不仅仅是文本，本质上指的是网页中能够显示的数据格式：纯文本、超链接、图片、按钮、视频、音频、输入框。而HTML代码就用来显示超文本。</li>
+<li>
+标记/标签：在HTML中，一个超文本内容会通过一个标签来体现。标签指利用&lt;&gt;和字母的组合来显示超文本。 
+<ul>
+<li>HTML中拥有固定数量的标签。不支持自定义标签。</li>
+<li>每一种标签对应一种超文本。比如<a></a>标签用来显示超链接。<img>标签用来展示图片。</li>
+<li>
+标签一般语法： 
+<ul>
+<li><标签名>要显示内容</标签名></li>
+<li>例如: <a>百度一下</a></li>
+</ul>
+</li>
+<li>语言：计算机语言。即完成人和计算机之间的沟通。我们可以使用HTML来编写网页，同时浏览器可以读懂HTML代码并解析成网页内容。</li>
+<li>
+属性
+<ul>
+<li>每个标签都有属于自己的属性或者叫特征。每个标签的属性数量是固定的。</li>
+<li>
+语法：<标签名  属性名="属性值"></标签名>&gt;
+<ul>
+<li>例如：&lt;a href='https://www.baidu.com'&gt;百度</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>html特点</p>
+<ol>
+<li>HTML标签中可以嵌入其他的HTML标签。但是要注意书写的顺序</li>
+</ol>
+</li>
+<li>
+<p>常见的HTML标签</p>
+<ul>
+<li>标题标签：h1 h2 h3 h4 h5 h6</li>
+<li>段落标签：p</li>
+<li>超链接： a</li>
+<li>图片：img</li>
+<li>表格： table  tr  td th</li>
+<li>换行 br</li>
+<li>特殊符号：</li>
+</ul>
+</li>
+<li>
+<p>编写HTML页面</p>
+<ol>
+<li>新建一个以.html为后缀的文件，在文件里面编写HTML代码</li>
+</ol>
+</li>
+<li>
+<p>标准HTML页面</p>
+<ol>
+<li>标准HTML页面具有一些基础的标签，用于设置网页的标题、网页的一些配置等操作。</li>
+<li>
+<code>&lt;!DOCTYPE html&gt;</code>
+<ol>
+<li>告诉浏览器该页面的HTML版本。浏览器就会以对应HTML版本的语法来解析HTML页面。该声明是HTML5版本的声明。如果HTML页面有以前HTML版本的语法，那么HTML5是向后兼容的，所以也会正常显示。</li>
+</ol>
+</li>
+<li>
+<code>&lt;html&gt;标签</code>：
+<ol>
+<li>每个HTML页面都有且只要一个<html>标签。HTML页面内容都应该在该标签下面</li>
+</ol>
+</li>
+<li><code>&lt;head</code>&gt;: 用于完成网页的一些配置。比如说设置网页的标题，或者指定网页的字符编码格式等。</li>
+<li><code>&lt;body&gt;</code>：网页主体。理论上 我们要在网页中显示的所有内容都是放在该标签之中。</li>
+<li><code>&lt;title&gt;</code>:专门写在head标签里，用于指定网页的标题</li>
+<li><code>&lt;meta&gt;</code>:配置标签，用于完成页面的一些常规配置，比如字符编码、或者页面关键字、缓存等。一般网页就直接写<meta charset='utf-8'>即可</li>
+</ol>
+</li>
+<li>
+<p>HTML标签</p>
+<ol>
+<li>
+<p>标签  h1 h2 h3 h4 h5 h6
+<code></code></p>
+<ol>
+<li>数字越大，字体尺寸反而越小</li>
+<li>字体都是粗体</li>
+</ol>
+</li>
+<li>
+段落标签：p   <p>内容</p>
+<ol>
+<li>一般一个段落就一个p标签</li>
+</ol>
+</li>
+<li>
+超链接： <a href='要跳转的网页地址'>链接文字</a>
+<ol>
+<li>href：指定要跳转的页面</li>
+<li>注意的是href里的地址必须是一个完整的地址。如： https://www.baidu.com</li>
+</ol>
+</li>
+<li>
+图片： img <img src='要显示图片的地址' title="要显示的文字">
+<ol>
+<li>
+src: 指定要显示的图片的地址
+<ol>
+<li>
+网络图片
+<ol>
+<li>复制网络图片地址即可</li>
+</ol>
+</li>
+<li>
+本地图片
+<ol>
+<li>相对路径</li>
+<li>绝对路径</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>title: 当鼠标悬停在图片上会显示的文字</li>
+<li>alt: 当图片加载失败时会显示的文字</li>
+<li>width:设置图片的宽度，以像素为单位</li>
+<li>
+height：设置图片的高度，以像素为单位
+<ol>
+<li>如果用户设置的宽高比例和图片本身比例不一致，就会导致图片变形</li>
+<li>一般我们只设置宽高中的一个属性，另一个属性浏览器会根据图片自身比例来等比例缩放。</li>
+</ol>
+</li>
+<li>
+align：设置图片的对齐方式，默认情况下是跟文字的基线是处在同一水平线上的。
+<ol>
+<li>top（顶部对齐）、bottom(底部对齐)、middle(居中对齐)</li>
+</ol>
+</li>
+<li>
+换行标签：br
+<ol>
+<li>一个<br>会换一行</li>
+<li><br>跟<img>一样没有结束标签,即没有</br></li>
+</ol>
+</li>
+<li>特殊符号</li>
+<li>
+背景颜色
+<ol>
+<li>
+给body标签添加bgcolor属性，值为颜色英文单词即可
+<ol>
+<li><body bgcolor='black'> 背景为黑色</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+font标签
+<ol>
+<li>可以设置文本的颜色 、字体大小、字体类型</li>
+<li>
+语法： <font size='4' color='red' face='宋体'>文本</font>
+<ol>
+<li>size: 设置文本字体大小，以数字为单位，默.认为4 。可选范围为1-7</li>
+<li>color：设置文本的颜色，支持英文单词、十六进制</li>
+<li>face：设置文本的字体类型：默认跟系统有关。常用的有 
+ '微软雅黑' '宋体'</li>
+</ol>
+</li>
+<li>font标签可以单独使用，也可以结合其他标签进行使用，比如p、a、h1标签等</li>
+</ol>
+</li>
+<li>
+图片混排
+<ol>
+<li>如何让图片和文字有居中显示效果</li>
+<li>解决：利用img标签提供的align属性</li>
+<li></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>文件路径</h3>
+<ol>
+<li>路径：是指某个文件在某个目录的位置描述。路径分为两种：绝对路径、相对路径</li>
+<li>
+绝对路径：
+<ol>
+<li>指某个文件的唯一位置的描述。比如说蜗牛学院成都校区：四川省成都市高新区孵化园园区5号楼3层301.</li>
+<li>在程序中，绝对地址一般指网络地址(以HTTP或HTTPs开头)或者以系统盘符开头（c:/）的地址.</li>
+</ol>
+</li>
+<li>
+相对地址：指某个文件根据某个参考文件夹而相对的位置描述。即从当前目录出发，其他文件所在的位置。
+<ol>
+<li>例子：朋友来找你吃饭，他现在在孵化园地铁口，你打电话说：从地铁a扣出来，往前走100米，然后右转200米，我在那等你。</li>
+<li>程序中，找到eye.png    我们会从所编辑的文件所在目录出发（该目录就是参考目录，右称为当前目录），先退回到上一级目录(第一周),再找子目录(images)，在images中找到eye.png。</li>
+<li>
+相对地址语法： 
+<ol>
+<li>上一级目录:  ../</li>
+<li>子目录:   子目录/</li>
+<li>例子： ../images/eye.png</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>表格</h3>
+<ol>
+<li>
+<p>表格标签</p>
+<ol>
+<li>
+<table></table>: 表示创建一个表格。具体几行几列由tr和td的数量来决定
+<ol>
+<li>border：设置表格的边框。以数字为单位。默认为0.即默认没有边框。</li>
+<li>width：设置表格的宽度。以像素为单位</li>
+<li>height:设置表格的宽度。以像素为单位</li>
+<li>align:设置表格本身相对于页面的水平对齐方式。有left 、center、right</li>
+<li>cellspacing：设置单元格之间的距离。默认为1，以数字为单位。</li>
+<li>cellpadding：设置单元格边框跟其内容之间的距离。有默认值。</li>
+<li>bgcolor：设置表格的背景颜色</li>
+</ol>
+</li>
+<li>
+<tr></tr>:表示行。一个tr表示表格中的一行。
+<ol>
+<li>align：设置一行中数据的水平对齐方式。有left 、center、right。</li>
+<li>height：设置该行的高度</li>
+<li>bgcolor:设置一行背景颜色</li>
+</ol>
+</li>
+<li>
+<td></td>:表示单元格。一个td表示一行中的一个单元格。
+<ol>
+<li>align：设置该单元格数据的对齐方式。有left、right、center。</li>
+<li>width：设置单元格的宽度</li>
+<li>height：设置单元格的高度</li>
+<li>colspan:用于跨列合并。比如colspan=&quot;3&quot;，表示合并3个单元格.</li>
+<li>rowspan:用于跨行合并。比如rowspan=&quot;3&quot;.表示合并3个单元格。</li>
+<li>bgcolor:设置单元格的颜色</li>
+</ol>
+</li>
+<li><th></th>:表示一个标题列。本质上就是一个特殊的td。th中的文字默认都是粗体。</li>
+</ol>
+</li>
+<li>
+<p>注意事项</p>
+<ol>
+<li>在HTML中，表格默认是没有边框以及宽高的，所以我们要看到效果，那么就必须设置table的边框以及宽高。</li>
+<li>在给表格填充数据时，如果有某行没有数据，那么该行的空间会被其他有数据的行给占领。</li>
+<li>如果每一行都有数据，或者都没有数据，那么表格会吧宽高平均分配到每一行。</li>
+<li>标题行在HTML中有专门的标签来书写，即th。</li>
+<li>表格中，标题行数据是水平垂直居中的。表格的每一行数据都是垂直居中的。</li>
+<li>如果需要实现数据水平居中，就可以设置tr或td的align属性为center。</li>
+<li>如果同一行中tr td都设置了align属性。对于td而言，会使用td里面的align属性。</li>
+<li>table中，tr，td、th都可以设置宽高。但要注意的是如果是给tr、td、th设置高度，都会影响整一行的高度。设置td、th宽度时，会影响整个一列</li>
+<li>table、tr、td都可以设置bgcolor。即背景颜色。同时几者之间的 覆盖关系为 td会覆盖tr，tr会覆盖table，table会覆盖body。</li>
+</ol>
+</li>
+</ol>
+<h3>页面实现步骤</h3>
+<pre><code>1. 画出线框图
+2. 创建HTML文件，实现线框
+3. 填充数据
+4. 细节微调
+</code></pre>
+
+<h3>背景图像以及水平线</h3>
+<ol>
+<li>
+<p>水平线- <hr></p>
+<ol>
+<li>color:设置水平线的颜色</li>
+</ol>
+</li>
+<li>
+<p>背景图像</p>
+<ol>
+<li>
+给body标签设置background属性，值为图像地址
+<ol>
+<li>如&lt;body background='../images/black-earth.png'&gt;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>表单</h3>
+<pre><code>1. 概念：表单是指专门用于收集用户信息的单子。
+2. 表单元素：用于收集用户信息的HTML标签
+    1. 输入框
+    2. 单选框
+    3. 多选框
+    4. 下拉菜单
+    5. 文本域
+    6. 按钮
+3. 表单标签
+    1. &lt;form&gt;&lt;/form&gt;：表示一个表单，所有收集信息的表单元素都放在form标签里
+    2. &lt;input /&gt;:输入框，具体输入的类型由input标签中的type属性来指定
+    3. &lt;select&gt;&lt;/select&gt;: 下拉菜单，菜单中的每个选项需要使用&lt;option&gt;标签
+    4. &lt;textarea&gt;&lt;/textarea&gt;:用于收集用户输入的多行文本
+    5. &lt;button&gt;&lt;/button&gt;:按钮，按钮中的文本直接在中间书写。
+4. 表单元素
+    1. 输入框
+    2. 密码框：
+    3. 单选框：&lt;input type='radio'&gt;
+        1. 如果需要实现单选，那么需要给input设置一样的name属性。
+        2. 如果其中一个选项为默认，那么就给input标签添加checked属性即可。即&lt;input type='radio' checked='checked'&gt;。同时checked可以省略，即&lt;input type='radio' checked&gt;
+    4. 多选框：&lt;input type='checkbox'&gt;
+        1. 如果多选框表示同一种情景，比如爱好。那么一般都会设置一样的name属性。
+        2. 同时支持添加checked属性来实现默认勾选。可以添加多个
+    5. 下拉菜单： select
+        1. 菜单中的每个选项需要使用option标签
+        2. 可以给某个option标签添加selected属性来设置为默认选项。如果没有selected，那么第一个选项是默认选项
+    6. 文本域： &lt;textarea&gt;&lt;/textarea&gt;
+        1. rows控制文本域能够输入多少行文字，但不同浏览器效果不一，后期会使用css控制。变相控制文本域的高度。
+        2. cols控制一行能够输入多少个文字。变相的是控制文本域的宽度。
+        3. 默认情况下，文本域是可以缩放的。后期可以使用css控制。
+    7. 按钮
+        1. input
+            1. &lt;input type='button' value='按钮上显示的文字'&gt;
+        2. button
+            1. &lt;button&gt;按钮显示的文字&lt;/button&gt;
+        3. 以下按钮写法具有提交表单的功能
+            1. &lt;input type='submit' value=‘提交’&gt;
+            2. &lt;button&gt;提交&lt;/button&gt;
+        4. 当点击提交按钮后，那么会吧数据提交到form标签中action属性所指的页面
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    :root{
+        --bg:#089cc2;
+        --h1:#f1f3e6;
+    }
+    .tinker{
+        width: 800px;
+        height: 1100px;
+        position: relative;
+        background: #6ca4bb;
+    }
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .header{
+        height: 500px;
+        width: 550px;
+        background: var(--bg);
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow:6px 9px 32px 2px  #f1f3e6 inset;
+        z-index: 1;
+    }
+    .face{
+        height: 380px;
+        width: 450px;
+        background: var(--h1);
+        position: absolute;
+        left: 50%;
+        top: 130px;
+        transform: translate(-50%, 0);
+        border-radius: 382px/ 320px 320px 300px 300px;
+        border: 1px solid black;
+        box-shadow:6px 9px 32px 2px  #f1f3e6 inset;
+        z-index: 1;
+    }
+    .eyes{
+        height: 150px;
+        width: 100px;
+        background: var(--h1);
+        position: absolute;
+        left: 44%;
+        top: 55px;
+        border-radius: 47%;
+        border: 1px solid black;
+        box-shadow:6px 9px 32px 2px  #f1f3e6 inset;
+        transform: translate(-55px,0);
+        z-index: 2;
+    }
+    .eyes.right{
+        transform:scale(-1,1) translate(-47px,0)
+        
+    }
+    .pupil{
+        width: 30px;
+        height: 40px;
+        background: #1e1f1a;
+        border-radius: 47%;
+        position: absolute;
+        left: 70px;
+        top: 59px;
+        box-shadow: 0 -3px 5px 2px rgba(255, 255, 255, 0.3) inset;
+        animation: pupil linear 8s infinite;
+    }
+    .pupil::after{
+        width: 10px;
+        height: 15px;
+        background: #fff;
+        border-radius: 47%;
+        position: absolute;
+        left: 10px;
+        top:12px;
+        content: '';
+        z-index: 3;
+        
+    }
+    .nouse{
+        height: 80px;
+        width: 80px;
+        background: #cc4448;
+        position: absolute;
+        left: 44%;
+        top: 55px;
+        border-radius: 50%;
+        border: 1px solid black;
+        transform: translate(0px,124px);
+        z-index: 3;
+    }
+    .nouse::after{
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 39px;
+        top:20px;
+        content: '';
+        z-index: 3;
+        box-shadow:0 0px 1px 1px #ffff;
+    }
+    .nouseline{
+        width: 50px;
+        height: 150px;
+        border: 1px solid black;
+        border-right: transparent;
+        border-bottom: transparent;
+        border-top:transparent;
+        border-radius: 30%;
+        position: absolute;
+        left: 48%;
+        top: 249px;
+        z-index: 2;
+    }
+    .mouth{
+        height: 100px;
+        width: 100px;
+        background: #fc755f;
+        position: absolute;
+        left: 44%;
+        top: 55px;
+        border-radius: 76px / 91px 100px 56px 56px;
+        border: 1px solid black;
+        transform: translate(-12px,320px);
+        box-shadow:11px 15px 0px 0px  #882732 inset; 
+        z-index: 3;
+        animation: mouth linear 8s infinite;
+    }
+    .facered{
+        height: 20px;
+        width: 30px;
+        background: #f2b4b5;
+        position: absolute;
+        left: 24%;
+        top: 70px;
+        border-radius: 47%;
+        box-shadow:11px -2px 10px 12px  #f2b4b5;
+        transform: translate(-55px,0);
+        z-index: 2;
+    }
+    .facered.right{
+        transform:scale(-1,1) translate(-261px,0)
+    }
+    .beard1{
+        width: 150px;
+        height: 1px;
+        border: 1px solid black;
+        border-right: transparent;
+        border-bottom: transparent;
+        border-left:transparent;
+        border-radius: 30%;
+        position: absolute;
+        transform:rotate(30deg);
+        left: 7%;
+        top: 100px;
+        z-index: 2;
+    }
+    .beard1.right{
+        transform:scale(-1, 1) translate(-148%, 0) rotate(30deg);
+    }
+    .beard2{
+        width: 150px;
+        height: 0px;
+        border: 1px solid black;
+        border-right: transparent;
+        border-bottom: transparent;
+        border-left:transparent;
+        border-radius: 30%;
+        position: absolute;
+        transform:rotate(0deg);
+        left: 3%;
+        top: 176px;
+        z-index: 2;
+    }
+    .beard2.right{
+        transform:scale(-1, 1) translate(-172%, 0) rotate(0deg);
+    }
+    .beard3{
+        width: 150px;
+        height: 0px;
+        border: 1px solid black;
+        border-right: transparent;
+        border-bottom: transparent;
+        border-left:transparent;
+        border-radius: 30%;
+        position: absolute;
+        transform:rotate(-30deg);
+        left: 7%;
+        top: 253px;
+        z-index: 2;
+    }
+    .beard3.right{
+        transform:scale(-1, 1) translate(-148%, 0) rotate(-30deg);
+    }
+    .band{
+        height: 20px;
+        width: 234px;
+        border: 1px solid black;
+        background: #9b232d;
+        position: absolute;
+        left: 50%;
+        top: 492px;
+        transform: translate(-50%, 0);
+        border-radius: 300px / 0px 0px 45px 48px;;
+        border: 2px solid black;
+        z-index: 2;
+    }
+    .body{
+        height: 479px;
+        width: 384px;
+        background: var(--bg);
+        position: absolute;
+        left: 50%;
+        top: 448px;
+        transform: translate(-50%, 0);
+        border-radius: 400px/ 440px 440px 370px 370px; 
+        border: 2px solid black;
+        z-index: 0;
+    }
+    .bella{
+        height: 80px;
+        width: 80px;
+        border: 1px solid black;
+        background: #f9db55;
+        position: absolute;
+        left: 50%;
+        top: 492px;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        z-index: 2;
+    }
+    .bella::after{
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 37px;
+        top:12px;
+        content: '';
+        z-index: 3
+    }
+    .bella::before{
+        width: 58px;
+        height: 12px;
+        background: black;
+        position: absolute;
+        left: 11px;
+        top:35px;
+        content: '';
+        z-index: 3
+    }
+    .tripe{
+        height: 323px;
+        width: 286px;
+        background: var(--h1);
+        position: absolute;
+        left: 50%;
+        top: 500px;
+        transform: translate(-50%, 0);
+        border-radius: 42%;
+        border: 1px solid black;
+        z-index: 1;
+    }
+    .bag{
+        height: 120px;
+        width: 240px;
+        background: var(--h1);
+        position: absolute;
+        left: 50%;
+        top: 655px;
+        transform: translate(-50%, 0);
+        border-radius: 240px/ 0px 0px 260px 260px; 
+        border: 1px solid black;
+        z-index: 2;
+        box-shadow:0px 0px 17px 1px  #70766c inset; 
+    }
+    .hand{
+        height: 308px;
+        width: 104px;
+        background: var(--bg);
+        position: absolute;
+        left: 27%;
+        top: 476px;
+        transform: translate(-50%, 0) rotate(30deg);
+        border-radius: 42%;
+        border: 1px solid black;
+        z-index: -1;
+    }
+    .hand.right{
+        transform:scale(-1,1) translate(-315px,0) rotate(30deg);
+    }
+    .ball{
+        height: 104px;
+        width: 104px;
+        background: var(--h1);
+        position: absolute;
+        left: 39%;
+        top: 225px;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        border: 1px solid black;
+        z-index: 0;
+    }
+    .foot{
+        height: 170px;
+        width: 194px;
+        background: var(--h1);
+        position: absolute;
+        left: 38%;
+        top: 832px;
+        transform: translate(-50%, 0);
+        border-radius: 42%;
+        border: 1px solid black;
+        z-index: 1;
+        box-shadow:0px 0px 17px 1px  #e9f4e3 inset; 
+    }
+    .foot.right{
+        transform: scale(-1, 1) translate(-53%, 0);
+    }
+    @keyframes mouth{
+        from {  height:100px;  border-radius: 76px / 91px 100px 56px 56px; }
+        50%  {  height: 20px;  border-radius: 76px / 40px 50px 20px 20px;}
+        to   {  height:  100px;  border-radius: 76px / 91px 100px 56px 56px;}
+    }
+    @keyframes pupil{
+        from {  width: 30px; height: 40px; left: 70px; top:59px; }
+        50%  {  width: 40px; height: 50px;  left: 35px; top:59px;}
+        to   {  width: 30px; height: 40px;  left: 70px; top:59px;}
+    }
+    </style>
+</head>
+<body>
+    <div class="tinker center">
+        <div class="header"></div>
+        <div class="face">
+            <div class="facered"></div>
+            <div class="facered right"></div>
+            <div class="beard">
+                <div class="beard1"></div>
+                <div class="beard1 right"></div>
+                <div class="beard2"></div>
+                <div class="beard2 right"></div>
+                <div class="beard3"></div>
+                <div class="beard3 right"></div>
+            </div>
+            <div class="beard right"></div>
+        </div>
+        <div class="eyes">
+            <div class="pupil"></div>
+        </div>
+        <div class="eyes right">
+            <div class="pupil"></div>
+        </div>
+        <div class="nouse"></div>
+        <div class="nouseline"></div>
+        <div class="mouth"></div>
+        <div class="band"></div>
+        <div class="bella"></div>
+        <div class="body"></div>
+        <div class="tripe"></div>
+        <div class="bag"></div>
+        <div class="hand">
+            <div class="ball"></div>
+        </div>
+        <div class="hand right">
+            <div class="ball"></div>
+        </div>
+        <div class="foot"></div>
+        <div class="foot right"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+header{
+    background-color: palegoldenrod;
+}
+.logo{
+    background-image: url("../image/logo-250px.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    width: 250px;
+    height: 60px;
+}
+.nav{
+    width: 600px;
+}
+
+table{
+    width: 1800px;
+    height: 60px;
+    margin: 0 auto;
+    border-spacing:0;
+    
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+    line-height: 60px;
+    width: 500px;
+    height: 60px;
+}
+li{
+    float: left;
+    width: 80px;
+    height: 60px;
+}
+input{
+    width: 250px;
+    height: 40px;
+    float: right;
+    margin-right: -2px;
+    /* 对齐搜索按钮button */
+}
+
+button{
+    background-image: url(../image/sousuo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 60px;
+    height: 47px;
+    border: 1px solid #cccccc; 
+    vertical-align: top;
+    /* 对齐搜索按钮button */
+}
+.last-td{
+    /* width: 60px; */
+    text-align: center;
+}
+.left-border{
+    border-left: 1px solid #cccccc;
+}
+ol{
+    list-style-type: none;
+    height: 60px;
+    width:200px;
+}
+.left-install{
+    height: 60px;
+    line-height: 60px;
+}
+a{
+    text-decoration: none;
+    color:grey;
+}
+a:hover{
+    color: lightskyblue;
+}
